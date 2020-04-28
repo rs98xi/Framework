@@ -31,6 +31,11 @@ namespace IP_Framework
             sizeOfAnswer = raspuns.Length;
             answer = Encoding.ASCII.GetBytes(raspuns);
         }
+
+        public static implicit operator IContext(Dictionary<string, string> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class ImageContext : IContext
@@ -40,7 +45,12 @@ namespace IP_Framework
 
     class EpidemyContext : IContext
     {
-        // to be discussed and implemented
+        public double x;
+        public double y;
+
+        public string specificSearch;
+
+        public Dictionary<string, string> AnswerDictionary;
     }
 
     class SymptomLearningContext : IContext
@@ -55,6 +65,10 @@ namespace IP_Framework
 
     class DataBaseContext : IContext
     {
-        // to be discussed and implemented
+        public DataBaseDefines databaseId;
+        public DataBaseDefines databaseFunctionId;
+        public Dictionary<string, string> ParametersDictionary;
+
+        public Dictionary<string, string> AnswerDictionary;
     }
 }

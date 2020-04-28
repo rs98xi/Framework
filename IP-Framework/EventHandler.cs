@@ -175,14 +175,20 @@ namespace IP_Framework
         ImageStoreResults,
         ImageAdapt,
 
-        EpidemyAskData = 301,
-        EpidemyStoreData,
-        EpidemyAlert,
-        EpidemyCheckForAlert,
+        EpidemyCheckForAlert = 301,
+        EpidemyCheckForSpecificAlert,
 
         DataBaseSaveData = 401,
         DataBaseDestroyData,
         DataBaseQueryData,
         DataBaseAlterData,
+    }
+
+    public enum DataBaseDefines
+    {
+        DatabaseDiseases = 0,
+        DiseasesFullQuery,
+        DiseasesSpecificQueryDisease,
+        DiseasesSpecificQueryPerson,
     }
 }

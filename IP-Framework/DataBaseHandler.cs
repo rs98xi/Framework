@@ -44,9 +44,6 @@ namespace IP_Framework
                 case SubModuleFunctions.DataBaseQueryData:
                     // search data
 
-                    answer = "Ai apelat db-ul cu comanda QueryData, dar inca nu e definit un raspuns";
-                    contextHandler.answer = Encoding.ASCII.GetBytes(answer);
-                    contextHandler.sizeOfAnswer = answer.Length;
 
                     return true;
                 case SubModuleFunctions.DataBaseSaveData:
@@ -74,5 +71,11 @@ namespace IP_Framework
             Console.WriteLine("UnInit execution");
             return true;
         }
+
+        public Dictionary<DataBaseDefines, string> DefinesTranslationDictionary = new Dictionary<DataBaseDefines, string>
+        (
+
+        );
+
     }
 }
