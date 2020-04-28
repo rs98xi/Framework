@@ -16,7 +16,7 @@ namespace IP_Framework
             Console.WriteLine(text);
         }
 
-        public override bool InvokeCommand(SubModuleFunctions command, IContext` contextHandler)
+        public override bool InvokeCommand(SubModuleFunctions command, IContext contextHandler)
         {
             Console.WriteLine("InvokeCommand execution for EpidemyAlert subModule");
 
